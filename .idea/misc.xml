@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Joshua/AndroidStudioProjects/RPI_Practice7/app/src/main/res/layout-port/activity_main.xml" value="0.1814814814814815" />
+        <entry key="..\:/Users/Joshua/AndroidStudioProjects/RPI_Practice7/app/src/main/res/layout/activity_main.xml" value="0.31040564373897706" />
         <entry key="..\:/Users/Joshua/AndroidStudioProjects/RPI_Practice7/rpi_practice2_8/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Joshua/AndroidStudioProjects/RPI_Practice7/rpi_practice2_9/src/main/res/drawable/ic_oval.xml" value="0.1" />
+        <entry key="..\:/Users/Joshua/AndroidStudioProjects/RPI_Practice7/rpi_practice2_9/src/main/res/drawable/ic_rounded_rectangle.xml" value="0.1095" />
+        <entry key="..\:/Users/Joshua/AndroidStudioProjects/RPI_Practice7/rpi_practice2_9/src/main/res/layout-land/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Joshua/AndroidStudioProjects/RPI_Practice7/rpi_practice2_9/src/main/res/layout/activity_main.xml" value="0.24791666666666667" />
       </map>
     </option>

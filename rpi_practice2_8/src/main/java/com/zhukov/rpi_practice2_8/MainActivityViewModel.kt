@@ -9,21 +9,16 @@ import java.text.DecimalFormat
 class MainActivityViewModel:ViewModel() {
     var solution: MutableLiveData<Int> = MutableLiveData<Int>()
 
-    fun getSolution(binding: ActivityMainBinding, solutionName: String) {
-        val sideA: Int = roundOffDecimal(binding.sideA.text.toString().toDouble())
-        val sideB: Int = roundOffDecimal(binding.sideB.text.toString().toDouble())
-        val sideC: Int = roundOffDecimal(binding.sideC.text.toString().toDouble())
+    fun getSolution(sideA: Double, sideB: Double, sideC: Double, solutionName: String) {
+        val intSideA: Int = roundOffDecimal(sideA)
+        val intSideB: Int = roundOffDecimal(sideB)
+        val intSideC: Int = roundOffDecimal(sideC)
         when (solutionName) {
-
-            "Сумма длины ребер" -> {
-                solution.value = sideA * 4 + sideB * 4 + sideC * 4
-            }
-            "Площадь поверхности" -> {
-                solution.value = 2 * (sideA * sideB + sideB * sideC + sideA * sideC)
-            }
-            else -> {
-                solution.value = sideA * sideB * sideC
-            }
+            "Сумма длины ребер" -> solution.value = intSideA * 4 + intSideB * 4 + intSideC * 4
+            "Площадь поверхности" -> solution.value = 2 * (intSideA * intSideB +
+                    intSideB * intSideC +
+                    intSideA * intSideC)
+            else -> solution.value = intSideA * intSideB * intSideC
         }
     }
 

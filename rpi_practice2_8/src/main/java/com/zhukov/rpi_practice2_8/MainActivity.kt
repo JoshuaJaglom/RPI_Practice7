@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
-import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.zhukov.rpi_practice2_8.databinding.ActivityMainBinding
@@ -35,13 +33,12 @@ class MainActivity : AppCompatActivity() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 binding.getSolution.setOnClickListener {
                     try {
-                        viewModel.getSolution(binding, solutionName[p2])
+                        val sideA: Double = binding.sideA.text.toString().toDouble()
+                        val sideB: Double = binding.sideB.text.toString().toDouble()
+                        val sideC: Double = binding.sideC.text.toString().toDouble()
+                        viewModel.getSolution(sideA, sideB, sideC, solutionName[p2])
                     } catch (e: NumberFormatException) {
-                        Toast.makeText(
-                            applicationContext,
-                            "Неверный формат числа, или не все поля заполнены!",
-                            LENGTH_SHORT
-                        ).show()
+                        binding.solution.text = "Ошибка ввода"
                     }
                 }
             }
